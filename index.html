@@ -1,33 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Specifies the character encoding -->
   <meta charset="UTF-8" />
-  
-  <!-- Makes the website responsive on all devices -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  
-  <!-- The title shown in the browser tab -->
   <title>HL Renovation & Construction</title>
-  
-  <!-- Link to an external CSS file for styling -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <!-- ===== HEADER SECTION ===== -->
   <header>
     <div class="container">
-      <!-- Website name / logo -->
       <h1>HL Renovation & Construction</h1>
-      
-      <!-- Navigation menu -->
+
+      <!-- Navigation menu with toggle button -->
       <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
+        <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+        <div class="nav-links">
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
       </nav>
     </div>
   </header>
@@ -44,22 +39,15 @@
   <section id="services" class="services">
     <div class="container">
       <h3>Our Services</h3>
-      
-      <!-- Service cards container -->
       <div class="cards">
-        <!-- Single Service Card -->
         <div class="card">
           <h4>Home Renovation</h4>
           <p>Complete remodeling, kitchen and bathroom upgrades, and modern finishes.</p>
         </div>
-
-        <!-- Single Service Card -->
         <div class="card">
           <h4>New Construction</h4>
           <p>From the ground up—residential, commercial, or extensions.</p>
         </div>
-
-        <!-- Single Service Card -->
         <div class="card">
           <h4>Project Management</h4>
           <p>We handle everything—on time, on budget, with top quality.</p>
@@ -86,49 +74,32 @@
   <section id="contact" class="contact">
     <div class="container">
       <h3>Contact Us</h3>
-      <!-- Contact details -->
       <p>Email: <a href="mailto:leetzeheong777@hotmail.com">leetzeheong777@hotmail.com</a></p>
       <p>Phone: (+65) 9630-9050</p>
       <p>Location: 105A Bidadari Park Drive, Alkaff Vista</p>
 
-      <!-- Contact form for free quote -->
       <h3>Get a Free Quote</h3>
       <form action="mailto:leetzeheong777@hotmail.com" method="post" enctype="text/plain">
-        
-        <!-- Name fields (first & last name) -->
         <div class="name-fields">
           <div class="field">
             <label for="fname">First Name:</label>
             <input type="text" id="fname" name="First Name" required />
           </div>
-
           <div class="field">
             <label for="lname">Last Name:</label>
             <input type="text" id="lname" name="Last Name" required />
           </div>
         </div>
-
-        <!-- Email field -->
         <label for="email">Email:</label>
         <input type="email" id="email" name="Email" required />
-
-        <!-- Phone field -->
         <label for="phone">Phone:</label>
         <input type="tel" id="phone" name="Phone" required />
-
-        <!-- Service required field -->
         <label for="service">Service Required:</label>
         <input type="text" id="service" name="Service Required" required />
-
-        <!-- Budget field (optional) -->
         <label for="budget">Budget:</label>
         <input type="text" id="budget" name="Budget" />
-
-        <!-- Extra details (textarea) -->
         <label for="details">Extra Details:</label>
         <textarea id="details" name="Extra Details" rows="4"></textarea>
-
-        <!-- Submit button -->
         <button type="submit">Submit</button>
       </form>
     </div>
@@ -140,5 +111,15 @@
       <p>&copy; 2025 HL Renovation & Construction. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- ===== MOBILE MENU SCRIPT ===== -->
+  <script>
+    const toggleButton = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggleButton.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>

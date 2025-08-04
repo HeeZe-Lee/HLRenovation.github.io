@@ -202,3 +202,56 @@ section {
   scroll-snap-align: center; /* Centers each section when scrolling */
   scroll-margin-top: 100px; /* Adjust for header height */
 }
+
+/* ===== MOBILE RESPONSIVE STYLES ===== */
+@media (max-width: 768px) {
+  /* Stack nav items vertically */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  /* Make hero text more readable */
+  .hero h2 {
+    font-size: 1.8rem;
+  }
+
+  /* Stack service cards vertically */
+  .cards {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+
+  /* Reduce container padding */
+  .container {
+    padding: 10px;
+  }
+
+  /* Form fields full-width */
+  .name-fields {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Reduce section padding */
+  .services,
+  .about,
+  .contact {
+    padding: 20px 10px;
+  }
+
+  /* Contact form inputs */
+  .contact input,
+  .contact textarea {
+    font-size: 1rem;
+  }
+
+  /* Adjust font size globally */
+  body {
+    font-size: 15px;
+  }
+}

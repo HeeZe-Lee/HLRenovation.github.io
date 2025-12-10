@@ -183,8 +183,11 @@ h3 {
   flex-direction: column;
 }
 
-/* ===== FOOTER ===== */
 footer {
   background: #1f1f1f;
   color: #ccc;
   text-align: ce
+  padding: 15px 0;
+  margin-top: 40px;
+}
+
